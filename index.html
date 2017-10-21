@@ -22,6 +22,9 @@
   document.getElementById('bg13').style.display='none';
   document.getElementById('bg21').style.display='block';
   }
+  function bg22show() {
+  document.getElementById('bg22').style.display='block';
+  }
 </script>
 
 
@@ -29,5 +32,6 @@
   <h1 id="bg11">A strange game</h1>
   <h3 id="bg12">Click the green button to start.</h3>
   <img id="bg21" style="display:none;width:502px;height:163.5px;" src="bg2.png" alt="Where did everything go?">
-  <button id="bg13" class="btn green" onclick="startGame()">Click me</button>
+  <button id="bg13" class="btn green" onclick="startGame();setTimeout(bg22show, 1000);">Click me</button>
+  <button id="bg22" style="display:none" class="btn green" onclick="">Continue</button>
 </body>
