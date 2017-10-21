@@ -14,8 +14,17 @@
 .green:hover {background-color: #46a049;}
 </style>
 
+
+<script>
+  function startGame() {
+  document.getElementById('bgtitle').style.display='none';
+  document.getElementById('bgsubtitle').style.display='none';
+  }
+</script>
+
+
 <body>
-  <h1>A strange game</h1>
-  <h3>Click the green button to start.</h3>
-  <button class="btn green">Click me</button>
+  <h1 id="bgtitle">A strange game</h1>
+  <h3 id="bgsubtitle">Click the green button to start.</h3>
+  <button class="btn green" onclick="startGame()">Click me</button>
 </body>
