@@ -33,16 +33,22 @@
   function bg32show() {
   document.getElementById('bg32').style.display='block';
   }
+  function startbg4() {
+  document.getElementById('bg31').style.display='none';
+  document.getElementById('bg32').style.display='none';
+  document.getElementById('bg41').style.display='block';
+  }
 </script>
 
 <center>
 <body>
   <h1 id="bg11">A strange game</h1>
   <h3 id="bg12">Press the black button to start.</h3>
+  <h2 id="bg41">This game is still being made. Please check back later.</h2>
   <img id="bg21" style="display:none;width:502px;height:163.5px;" src="bg2.png" alt="Where did everything go?">
   <img id="bg31" style="display:none;width:502px;height:163.5px;" src="bg3.png" alt="Oh well. I'm going to leave now.">
   <button id="bg13" class="btn black" onclick="startbg2();setTimeout(bg22show, 2000);">Start</button>
   <button id="bg22" style="display:none" class="btn black" onclick="startbg3();setTimeout(bg32show, 2000);">Continue</button>
-  <button id="bg32" style="display:none" class="btn black" onclick="">Continue</button>
+  <button id="bg32" style="display:none" class="btn black" onclick="startbg4()">Continue</button>
 </body>
 </center>
