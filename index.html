@@ -73,6 +73,9 @@ body {
   bgmusic2.pause()
   endingmusic.play()
   }
+  function bg42show() {
+  document.getElementById('bg42').style.display='block';
+  }
   function reloadPage() {
   window.location.reload(false);
   }
@@ -101,12 +104,12 @@ body {
 </div>
 <div id="bg3div" style="display:none">
   <img id="bg31" class="img" style="width:502px;height:163.5px;" src="images/speech2.png" alt="This image has not loaded correctly.">
-  <button id="bg32" class="btn black" style="display:none" onclick="startbg4()"><h2>Yes</h2></button>
+  <button id="bg32" class="btn black" style="display:none" onclick="startbg4();setTimeout(bg42show, 2000);"><h2>Yes</h2></button>
   <button id="bg33" class="btn black" style="display:none" onclick="ending()"><h2>No</h2></button>
 </div>
 <div id="bg4div" style="display:none">
   <img id="bg41" class="img" style="width:502px;height:163.5px;" src="images/speech3.png" alt="This image has not loaded correctly.">
-  <button id="rstbtn2" class="btn black" onclick=""><h2>Continue</h2></button>
+  <button id="bg42" style="display:none" class="btn black" onclick=""><h2>Continue</h2></button>
 </div>
 </body>
 </div>
