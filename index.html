@@ -40,12 +40,9 @@ body {
   var endingmusic = document.getElementById("endingmusic");
   
   function startbg2() {
-  document.getElementById('bg11').style.display='none';
-  document.getElementById('bg12').style.display='none';
-  document.getElementById('bg13').style.display='none';
-  document.getElementById('bg14').style.display='none';
-  document.getElementById('bg21').style.display='block';
-  document.getElementById('rstbtn').style.display='block';
+  document.getElementById('titlediv').style.display='none';
+  document.getElementById('restartdiv').style.display='block';
+  document.getElementById('bg2div').style.display='block';
   bgmusic.pause();
   bgmusic2.play()
   }
@@ -53,22 +50,18 @@ body {
   document.getElementById('bg22').style.display='block';
   }
   function startbg3() {
-  document.getElementById('bg21').style.display='none';
-  document.getElementById('bg22').style.display='none';
-  document.getElementById('bg31').style.display='block';
+  document.getElementById('bg2div').style.display='none';
+  document.getElementById('bg3div').style.display='block';
   }
   function bg32show() {
   document.getElementById('bg32').style.display='block';
   document.getElementById('bg33').style.display='block';
   }
   function startbg4() {
-  document.getElementById('bg31').style.display='none';
-  document.getElementById('bg32').style.display='none';
-  document.getElementById('bg33').style.display='none';
-  document.getElementById('rstbtn').style.display='none';
+  document.getElementById('bg3div').style.display='none';
+  document.getElementById('bg4div').style.display='block';
+  document.getElementById('restartdiv').style.display='none';
   document.getElementById('rstbtn2').style.display='block';
-  document.getElementById('bg41').style.display='block';
-  document.getElementById('bg42').style.display='block';
   }
   function ending() {
   document.getElementById('restartdiv').style.display='none';
@@ -99,18 +92,18 @@ body {
   <button id="bg12" class="btn black" onclick="startbg2();setTimeout(bg22show, 2000);"><h2>Play</h2></button>
   <button id="bg13" class="btn black" onclick="window.location.href='http://strange-game.com/credits'"><h2>Credits</h2></button>
 </div>
-<div id="bg2div">
-   <img id="bg21" style="display:none;width:502px;height:163.5px;" src="images/speech1.png" alt="This image has not loaded correctly.">
-   <button id="bg22" style="display:none" class="btn black" onclick="startbg3();setTimeout(bg32show, 2000);"><h2>Continue</h2></button>
+<div id="bg2div" style="display:none">
+   <img id="bg21" style="width:502px;height:163.5px;" src="images/speech1.png" alt="This image has not loaded correctly.">
+   <button id="bg22" class="btn black" style="display:none" onclick="startbg3();setTimeout(bg32show, 2000);"><h2>Continue</h2></button>
 </div>
-<div id="bg3div">
-  <img id="bg31" style="display:none;width:502px;height:163.5px;" src="images/speech2.png" alt="This image has not loaded correctly.">
-  <button id="bg32" style="display:none" class="btn black" onclick="startbg4()"><h2>Yes</h2></button>
-  <button id="bg33" style="display:none" class="btn black" onclick="ending()"><h2>No</h2></button>
+<div id="bg3div" style="display:none">
+  <img id="bg31" style="width:502px;height:163.5px;" src="images/speech2.png" alt="This image has not loaded correctly.">
+  <button id="bg32" class="btn black" style="display:none" onclick="startbg4()"><h2>Yes</h2></button>
+  <button id="bg33" class="btn black" style="display:none" onclick="ending()"><h2>No</h2></button>
 </div>
-<div id="bg4div">
-  <h2 id="bg41" style="display:none">This game is still being made.</h2>
-  <button id="rstbtn2" style="display:none" class="btn black" onclick="reloadPage()"><h2>Restart</h2></button>
+<div id="bg4div" style="display:none">
+  <h2 id="bg41">This game is still being made.</h2>
+  <button id="rstbtn2" class="btn black" onclick="reloadPage()"><h2>Restart</h2></button>
 </div>
 </body>
 </div>
