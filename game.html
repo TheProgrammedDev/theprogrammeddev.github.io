@@ -1,0 +1,113 @@
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+<title>A strange game</title>
+</head>
+
+<style>
+  .img {
+    padding: 0px 0px 30px 0px;
+  }
+  .btn {
+    border: none;
+    color: white;
+    padding: 0px 24px;
+    cursor: pointer;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.black {background-color: #000000; clear:}
+.black:hover {background-color: #4d4d4d;}
+  
+.black2 {background-color: #000000; float: right;}
+.black2:hover {background-color: #4d4d4d; float: right;}
+  
+body {
+  font-family: "Arial Black", Gadget, sans-serif;
+  clear: both;
+}
+</style>
+
+<audio autoplay loop id="bgmusic">
+  <source src="bgmusic.mp3" type="audio/mpeg">
+</audio>
+<audio loop id="bgmusic2">
+  <source src="bgmusic2.mp3" type="audio/mpeg">
+</audio>
+<audio loop id="endingmusic">
+  <source src="endingmusic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  var bgmusic = document.getElementById("bgmusic");
+  var bgmusic2 = document.getElementById("bgmusic2");
+  var endingmusic = document.getElementById("endingmusic");
+  
+  function startbg2() {
+  document.getElementById('titlediv').style.display='none';
+  document.getElementById('bg2div').style.display='block';
+  bgmusic.pause();
+  bgmusic2.play()
+  }
+  function bg22show() {
+  document.getElementById('bg22').style.display='block';
+  }
+  function startbg3() {
+  document.getElementById('bg2div').style.display='none';
+  document.getElementById('bg3div').style.display='block';
+  }
+  function bg32show() {
+  document.getElementById('bg32').style.display='block';
+  document.getElementById('bg33').style.display='block';
+  }
+  function startbg4() {
+  document.getElementById('bg3div').style.display='none';
+  document.getElementById('bg4div').style.display='block';
+  document.getElementById('rstbtn2').style.display='block';
+  }
+  function ending() {
+  document.getElementById('restartdiv').style.display='none';
+  document.getElementById('maingamediv').style.display='none';
+  document.getElementById('endingdiv').style.display='block';
+  bgmusic2.pause()
+  endingmusic.play()
+  }
+  function bg42show() {
+  document.getElementById('bg42').style.display='block';
+  }
+  function reloadPage() {
+  window.location.reload(false);
+  }
+</script>
+
+<center>
+<div id="maingamediv">
+<body>
+<div id="titlediv">
+  <a href="http://strange-game.com">
+  <img style="width:552.333333333px;height:201.666666667px;" src="images/logo.png" alt="This image has not loaded correctly.">
+  </a>
+  <h3>Make sure JavaScript and images are enabled on this site.</h3>
+  <button class="btn black" onclick="startbg2();setTimeout(bg22show, 2000);"><h2>Play</h2></button>
+  <button class="btn black" onclick="window.location.href='http://strange-game.com/credits'"><h2>Credits</h2></button>
+</div>
+<div id="bg2div" style="display:none">
+   <img class="img" style="width:502px;height:163.5px;" src="images/speech1.png" alt="This image has not loaded correctly.">
+   <button id="bg22" class="btn black" style="display:none" onclick="startbg3();setTimeout(bg32show, 2000);"><h2>Continue</h2></button>
+</div>
+<div id="bg3div" style="display:none">
+  <img class="img" style="width:502px;height:163.5px;" src="images/speech2.png" alt="This image has not loaded correctly.">
+  <button id="bg32" class="btn black" style="display:none" onclick="startbg4();setTimeout(bg42show, 2000);"><h2>Yes</h2></button>
+  <button id="bg33" class="btn black" style="display:none" onclick="ending()"><h2>No</h2></button>
+</div>
+<div id="bg4div" style="display:none">
+  <img class="img" style="width:502px;height:163.5px;" src="images/speech3.png" alt="This image has not loaded correctly.">
+  <button id="bg42" style="display:none" class="btn black" onclick=""><h2>Continue</h2></button>
+</div>
+</body>
+</div>
+<div id="endingdiv" style="display:none">
+<body>
+  <h1 id="endingtexttitle">You discovered an ending!</h1>
+  <button id="endingrstbtn" class="btn black" onclick="reloadPage()"><h2>Restart</h2></button>
+</body>
+</center>
