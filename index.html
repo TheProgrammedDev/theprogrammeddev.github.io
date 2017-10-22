@@ -10,11 +10,13 @@
     padding: 0px 24px;
     cursor: pointer;
     font-family: "Arial Black", Gadget, sans-serif;
-    float: left;
 }
 
 .black {background-color: #000000;}
-.black:hover {background-color: #4d4d4d;}
+.black:hover {background-color: #4d4d4d; clear: both;}
+  
+.black2 {background-color: #000000;}
+.black2:hover {background-color: #4d4d4d; float: left;}
   
 body {
   font-family: "Arial Black", Gadget, sans-serif;
@@ -70,7 +72,7 @@ Your browser does not support the audio element.
   }
 </script>
 
-  <button id="rstbtn" style="display:none" class="btn black" onclick="reloadPage()"><h2>Restart</h2></button> <button id="mutebtn" class="btn black" onclick="muteMusic()"><h2>Mute music</h2></button> <button id="unmutebtn" style="display:none" class="btn black" onclick="unmuteMusic()"><h2>Unmute music</h2></button>
+  <button id="rstbtn" style="display:none" class="btn black2" onclick="reloadPage()"><h2>Restart</h2></button> <button id="mutebtn" class="btn black2" onclick="muteMusic()"><h2>Mute music</h2></button> <button id="unmutebtn" style="display:none" class="btn black2" onclick="unmuteMusic()"><h2>Unmute music</h2></button>
 
 <center>
 <body>
