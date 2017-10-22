@@ -22,7 +22,7 @@ body {
   font-family: "Arial Black", Gadget, sans-serif;
   clear: both;
 }
-header, footer {
+header {
     padding: 5px;
     text-align: center;
     border: 1px black;
@@ -76,9 +76,9 @@ Your browser does not support the audio element.
   document.getElementById('mutebtn').style.display='block';
   }
 </script>
-
+<header>
   <button id="rstbtn" style="display:none" class="btn black" onclick="reloadPage()"><h2>Restart</h2></button> <button id="mutebtn" class="btn black2" onclick="muteMusic()"><h2>Mute music</h2></button> <button id="unmutebtn" style="display:none" class="btn black2" onclick="unmuteMusic()"><h2>Unmute music</h2></button>
-
+</header>
 <center>
 <body>
   <img id="bg11" style="width:552.333333333px;height:201.666666667px;" src="logo.png" alt="This image has not loaded correctly.">
