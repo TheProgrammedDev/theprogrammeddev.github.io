@@ -37,6 +37,7 @@ body {
 <script>
   var bgmusic = document.getElementById("bgmusic");
   var bgmusic2 = document.getElementById("bgmusic2");
+  var endingmusic = document.getElementById("endingmusic");
   
   function startbg2() {
   document.getElementById('bg11').style.display='none';
@@ -73,6 +74,8 @@ body {
   document.getElementById('restartdiv').style.display='none';
   document.getElementById('maingamediv').style.display='none';
   document.getElementById('endingdiv').style.display='block';
+  bgmusic2.pause()
+  endingmusic.play()
   }
   function reloadPage() {
   window.location.reload(false);
