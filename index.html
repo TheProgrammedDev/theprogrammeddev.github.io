@@ -15,11 +15,11 @@
     font-family: "Arial Black", Gadget, sans-serif;
 }
 
-.black {background-color: #000000; clear:}
+.black {background-color: #000000;}
 .black:hover {background-color: #4d4d4d;}
   
-.black2 {background-color: #000000; float: right;}
-.black2:hover {background-color: #4d4d4d; float: right;}
+.red {background-color: #ff0000;}
+.red:hover {background-color: #990000;}
   
 body {
   font-family: "Arial Black", Gadget, sans-serif;
@@ -75,6 +75,43 @@ body {
   function reloadPage() {
   window.location.reload(false);
   }
+  function addSave() {
+      if(typeof(Storage) !== "undefined") {
+        if (localStorage.savedata) {
+      localStorage.savedata = Number(localStorage.savedata) + 1;
+  } else {
+      localStorage.savedata = 1;
+  }
+    } else {
+        alert("Warning! Your browser does not support the save data function! Any progress made in this game will not be saved!");
+    }
+  }
+  function clearSave {
+          if(typeof(Storage) !== "undefined") {
+        if (localStorage.savedata) {
+      confirmDataClear();
+      if (dataclearoutput == "Yes") {
+      localStorage.savedata = 0;
+      alert("Your save data was cleared.");
+      } else {
+      alert("Your save data has not been cleared.");
+      }
+  } else {
+      alert("Sorry, but there's no save data to clear!");
+  }
+    } else {
+        alert("Sorry, but there's no save data to clear!");
+    }
+  }
+  function confirmDataClear() {
+    var dataclearoutput;
+    var confirmclear = confirm("Are you sure you would like to clear your save data?");
+    if (confirmclear == true) {
+        dataclearoutput = return "Yes";
+    } else {
+        dataclearoutput = return "No";
+    }
+}
 </script>
 
 <center>
@@ -84,9 +121,10 @@ body {
   <a href="http://strange-game.com">
   <img style="width:552.333333333px;height:201.666666667px;" src="images/logo.png" alt="This image has not loaded correctly.">
   </a>
-  <h3>Make sure JavaScript and images are enabled on this site.</h3>
-  <button class="btn black" onclick="startbg2();setTimeout(bg22show, 2000);"><h2>Play</h2></button>
+  <h3>Make sure JavaScript and images are enabled on this site. This game autosaves.</h3>
+  <button class="btn black" onclick="addSave();startbg2();setTimeout(bg22show, 2000);"><h2>Play</h2></button>
   <button class="btn black" onclick="window.location.href='http://strange-game.com/credits'"><h2>Credits</h2></button>
+  <button class="btn red" onclick="clearSave"><h2>Clear save data</h2></button>
 </div>
 <div id="bg2div" style="display:none">
    <img class="img" style="width:502px;height:163.5px;" src="images/speech1.png" alt="This image has not loaded correctly.">
