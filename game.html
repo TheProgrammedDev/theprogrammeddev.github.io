@@ -75,43 +75,6 @@ body {
   function reloadPage() {
   window.location.reload(false);
   }
-  function addSave() {
-      if(typeof(Storage) !== "undefined") {
-        if (localStorage.savedata) {
-      localStorage.savedata = Number(localStorage.savedata) + 1;
-  } else {
-      localStorage.savedata = 1;
-  }
-    } else {
-        alert("Warning! Your browser does not support the save data function! Any progress made in this game will not be saved!");
-    }
-  }
-  function clearSave {
-          if(typeof(Storage) !== "undefined") {
-        if (localStorage.savedata) {
-      confirmDataClear();
-      if (dataclearoutput == "Yes") {
-      localStorage.savedata = 0;
-      alert("Your save data was cleared.");
-      } else {
-      alert("Your save data has not been cleared.");
-      }
-  } else {
-      alert("Sorry, but there's no save data to clear!");
-  }
-    } else {
-        alert("Sorry, but there's no save data to clear!");
-    }
-  }
-  function confirmDataClear() {
-    var dataclearoutput;
-    var confirmclear = confirm("Are you sure you would like to clear your save data?");
-    if (confirmclear == true) {
-        dataclearoutput = return "Yes";
-    } else {
-        dataclearoutput = return "No";
-    }
-}
 </script>
 
 <center>
