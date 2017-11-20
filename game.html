@@ -63,6 +63,10 @@ body {
   document.getElementById('bg3div').style.display='none';
   document.getElementById('bg4div').style.display='block';
   }
+  function startbg5() {
+  document.getElementById('bg4div').style.display='none';
+  document.getElementById('bg5div').style.display='block';
+  }
   function ending() {
   document.getElementById('maingamediv').style.display='none';
   document.getElementById('endingdiv').style.display='block';
@@ -98,8 +102,11 @@ body {
   <button id="bg33" class="btn black" style="display:none" onclick="ending()"><h2>No</h2></button>
 </div>
 <div id="bg4div" style="display:none">
-  <img class="img" style="width:502px;height:163.5px;" src="images/speech_3.png" alt="This image has not loaded correctly.">
-  <button id="bg42" style="display:none" class="btn black" onclick="reloadPage()"><h2>Continue</h2></button>
+  <img class="img" style="width:502px;height:163.5px;" src="images/speech03.png" alt="This image has not loaded correctly.">
+  <button id="bg42" style="display:none" class="btn black" onclick="startbg5()"><h2>Continue</h2></button>
+</div>
+ <div id="bg5div" style="display:none">
+  <img class="img" style="width:502px;height:163.5px;" src="images/logo.png" alt="This image has not loaded correctly.">
 </div>
 </body>
 </div>
