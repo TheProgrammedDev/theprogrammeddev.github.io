@@ -1,0 +1,64 @@
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+<title>A strange game</title>
+</head>
+
+<style>
+  .img {
+    padding: 0px 0px 30px 0px;
+  }
+  .btn {
+    border: none;
+    color: white;
+    padding: 0px 24px;
+    cursor: pointer;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.black {background-color: #000000;}
+.black:hover {background-color: #4d4d4d;}
+  
+.red {background-color: #ff0000;}
+.red:hover {background-color: #990000;}
+  
+body {
+  font-family: "Arial Black", Gadget, sans-serif;
+  clear: both;
+}
+</style>
+<audio autoplay loop id="bgmusic2">
+  <source src="bgmusic2.mp3" type="audio/mpeg">
+</audio>
+<audio loop id="endingmusic">
+  <source src="endingmusic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  var bgmusic2 = document.getElementById("bgmusic2");
+  var endingmusic = document.getElementById("endingmusic");
+  
+  function reloadPage() {
+  window.location.reload(false);
+  }
+</script>
+
+<center>
+<div id="maingamediv">
+<body>
+ <div id="bg5div" style="display:none">
+   <h3>Click the citizens to rescue them</h3>
+<div style="display:inline-block; position:relative;">
+    <img id="bg5img" class="img" style="width:502px;height:502;" src="images/rescue_img_bg5_0_1.png" alt="This image has not loaded correctly.">
+  <!--<button onclick="window.location.href='/bg5_0_0'" style="position:absolute; bottom: 346; left: 138; width: 60px; height: 35px; cursor: pointer; color: transparent; background-color: transparent; border-color: transparent;"></button>-->
+</div>
+  
+  
+</div>
+</body>
+</div>
+<div id="endingdiv" style="display:none">
+<body>
+  <h1 id="endingtexttitle">You discovered an ending!</h1>
+  <button id="endingrstbtn" class="btn black" onclick="reloadPage()"><h2>Restart</h2></button>
+</body>
+</center>
